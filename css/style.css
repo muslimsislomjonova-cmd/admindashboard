@@ -1,0 +1,254 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #312b59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #f0f0f0;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  background-color: #27224d;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-shape {
+  position: absolute;
+  background-color: rgba(65, 60, 100, 0.5);
+  border-radius: 50%;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 150px;
+  top: 50px;
+  left: -50px;
+  border-radius: 50px;
+  transform: rotate(-15deg);
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  bottom: 50px;
+  right: -100px;
+}
+
+.shape-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 200px;
+  left: 100px;
+}
+
+.background-stars {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 24px;
+  opacity: 0.3;
+}
+
+.login-box {
+  background-color: rgba(43, 38, 77, 0.8);
+  padding: 40px 50px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+}
+.logo .tm {
+  font-size: 16px;
+  vertical-align: super;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-size: 10px;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  background-color: #3c356e;
+  color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.input-group input:focus {
+  outline: 2px solid #5a52a3;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #27224d;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 25px;
+}
+
+.login-message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+  color: #f0f0f0;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #131324;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8c7ae6;
+  margin-bottom: 40px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #b0b0d0;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+.sidebar ul li a:hover {
+  background-color: #2b2b4a;
+}
+.sidebar ul li a.active {
+  background-color: #8c7ae6;
+  color: white;
+}
+.sidebar ul li a .material-icons {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.sidebar .threat-details, .sidebar .settings-menu {
+  margin-top: 20px;
+}
+.sidebar .threat-details h4, .sidebar .settings-menu h4 {
+  color: #b0b0d0;
+  padding: 10px 15px;
+  margin: 0;
+}
+.sidebar .upgrade-box {
+  background-color: #2b2b4a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: auto;
+}
+.sidebar .upgrade-box p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.sidebar .upgrade-box a {
+  color: #8c7ae6;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar .logout {
+  margin-top: 20px;
+}
+.sidebar .logout a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header .greeting {
+  font-size: 18px;
+  font-weight: 500;
+}
+.header .search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #2b2b4a;
+  padding: 8px 15px;
+  border-radius: 20px;
+  width: 300px;
+}
+.header .search-bar .material-icons {
+  margin-right: 10px;
+  color: #b0b0d0;
+}
+.header .search-bar input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

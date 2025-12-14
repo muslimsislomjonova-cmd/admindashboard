@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; 
+    color: #f0f0f0; 
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #131324; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #8c7ae6; 
+        margin-bottom: 40px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #b0b0d0;
+                border-radius: 8px;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #2b2b4a;
+                }
+
+                &.active {
+                    background-color: #8c7ae6;
+                    color: white;
+                }
+
+                .material-icons {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .threat-details, .settings-menu {
+        margin-top: 20px;
+
+        h4 {
+            color: #b0b0d0;
+            padding: 10px 15px;
+            margin: 0;
+        }
+    }
+
+    .upgrade-box {
+        background-color: #2b2b4a;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: auto; 
+        
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #8c7ae6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .logout {
+        margin-top: 20px;
+        
+        a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #f0f0f0;
+        }
+    }
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .greeting {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+       .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: #2b2b4a;
+        padding: 8px 15px;
+        border-radius: 20px;
+        width: 300px;
+
+        .material-icons {
+            margin-right: 10px;
+            color: #b0b0d0;
+        }
+
+        input {
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            width: 100%;
+        }
+    }
+}
+
+
