@@ -251,4 +251,86 @@ body {
   color: white;
   outline: none;
   width: 100%;
+}
+
+.dashboard {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.card h2 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.red {
+  background: #ef4444;
+}
+
+.purple {
+  background: #8b5cf6;
+}
+
+.dark-blue {
+  background: #1e40af;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.orange {
+  background: #f59e0b;
+}
+
+.light-green {
+  background: #4ade80;
+}
+
+.coral {
+  background: #fb7185;
+}
+
+.table-box {
+  background: #2a2d4f;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #3b3f6b;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
 }/*# sourceMappingURL=style.css.map */
