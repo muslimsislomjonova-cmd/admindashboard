@@ -1,64 +1,51 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('loginForm');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const msg = document.getElementById('message');
-    
+const token = localStorage.getItem("token");
 
-    const VALID_EMAIL = 'hello@icloud.co';
-    const VALID_PASSWORD = '8888';
-    
+if (!token) {
+  window.location.href = "./index.html"; 
+}
 
-    function createDummyToken(userEmail) {
+fetch("https://fakestoreapi.com/products")
+  .then(res => res.json())
+  .then(data => {
+    renderTable(data);
+  })
+  .catch(err => {
+    console.log("API xato:", err);
+  });
 
-        const header = btoa(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
-        const payload = btoa(JSON.stringify({ email: userEmail, iat: Date.now() })); 
-        const signature = "simple-signature-123"; 
-        
+function renderTable(products) {
+  const tbody = document.getElementById("tableBody");
 
-    }
-    
-  
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); 
-        
-        const mail = email.value.trim();
-        const pass = password.value.trim();
+  if (!tbody) {
+    console.log("tableBody topilmadi");
+    return;
+  }
 
-        msg.className = 'login-message';
-        
-        if (mail === VALID_EMAIL && pass === VALID_PASSWORD) {
-          
-            const token = createDummyToken(mail);
-            
-          
-            localStorage.setItem('userToken', token);
-            
-            msg.textContent = ' Kirish muvaffaqiyatli!';
-            msg.classList.add('success');
-            
-           
-            setTimeout(() => {
-                window.location.href = './title/_home__pages.html'; 
-            }, 1000);
-            
-               } else {
-          
-            msg.textContent = 'Xato: Malumotlar notogri. Token yoq.';
-            msg.classList.add('error');
-     
-            localStorage.removeItem('userToken');
-        }
-    });
+  tbody.innerHTML = "";
+
+  products.forEach(function (item, index) {
+    tbody.innerHTML += `
+      <tr>
+        <td>${index + 1}</td>
+        <td>${item.title}</td>
+        <td>${item.category}</td>
+        <td>${item.description.slice(0, 80)}...</td>
+        <td>${item.price}$</td>
+        <td>
+          <img src="${item.image}" width="50">
+        </td>
+        <td>
+          <button>View</button>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    `;
+  });
+}
 
 
-    const token = localStorage.getItem('userToken');
-    
-    if (token) {
-   
-        console.log("Foydalanuvchining tokenga kirishi bor: ", token);
-   
-    } else {
-        console.log("Foydalanuvchi tizimga kirmagan.");
-    }
-});
+function logout() {
+  localStorage.removeItem("token");
+  window.location.href = "../login.html"; 
+}

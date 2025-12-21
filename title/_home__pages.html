@@ -57,132 +57,25 @@
     </div>
 
 
-<div class="dashboard">
 
-  <!-- STAT CARDS -->
-  <div class="stats">
-    <div class="card blue">
-      <p>Total Shipments</p>
-      <h2>869</h2>
-    </div>
-    <div class="card red">
-      <p>Pending</p>
-      <h2>562</h2>
-    </div>
-    <div class="card purple">
-      <p>Delivered</p>
-      <h2>624</h2>
-    </div>
-    <div class="card dark-blue">
-      <p>Cancelled</p>
-      <h2>47</h2>
-    </div>
-
-    <div class="card green">
-      <p>In Transit</p>
-      <h2>365</h2>
-    </div>
-    <div class="card orange">
-      <p>Returned</p>
-      <h2>26</h2>
-    </div>
-    <div class="card light-green">
-      <p>On Hold</p>
-      <h2>78</h2>
-    </div>
-    <div class="card coral">
-      <p>Failed</p>
-      <h2>15</h2>
-    </div>
-  </div>
-
-  <!-- TABLE -->
-  <div class="table-box">
-    <h2>Vehicle List</h2>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Vehicle ID</th>
-          <th>Type</th>
-          <th>Status</th>
-          <th>Location</th>
-          <th>Last Service</th>
-          <th>Next Maintenance</th>
-          <th>Driver</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>KG-656-LS9</td>
-          <td>Toyota Highlander 2004</td>
-          <td class="active">Active</td>
-          <td>Belgrade, SB</td>
-          <td>2025-03-22</td>
-          <td>2025-12-23</td>
-          <td>John Doe</td>
-        </tr>
-
-        <tr>
-          <td>VR-639-J56</td>
-          <td>Lexus 350 2000</td>
-          <td class="idle">Idle</td>
-          <td>San Diego, US</td>
-          <td>2025-02-20</td>
-          <td>2025-10-08</td>
-          <td>Jane Smith</td>
-        </tr>
-
-        <tr>
-          <td>HY-987-G66</td>
-          <td>Ford F190</td>
-          <td class="maintenance">Maintenance</td>
-          <td>Birmingham, UK</td>
-          <td>2025-02-10</td>
-          <td>2025-12-26</td>
-          <td>Mike Johnson</td>
-        </tr>
-      </tbody>
-
-       <tbody>
-        <tr>
-          <td>KG-656-LS9</td>
-          <td>Toyota Highlander 2004</td>
-          <td class="active">Active</td>
-          <td>Belgrade, SB</td>
-          <td>2025-03-22</td>
-          <td>2025-12-23</td>
-          <td>John Doe</td>
-        </tr>
-
-        <tr>
-          <td>VR-639-J56</td>
-          <td>Lexus 350 2000</td>
-          <td class="idle">Idle</td>
-          <td>San Diego, US</td>
-          <td>2025-02-20</td>
-          <td>2025-10-08</td>
-          <td>Jane Smith</td>
-        </tr>
-
-        <tr>
-          <td>HY-987-G66</td>
-          <td>Ford F190</td>
-          <td class="maintenance">Maintenance</td>
-          <td>Birmingham, UK</td>
-          <td>2025-02-10</td>
-          <td>2025-12-26</td>
-          <td>Mike Johnson</td>
-        </tr>
-      </tbody>
-      
-    </table>
-  </div>
-
-</div>
+<table  cellpadding="10">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="/index.js"></script>
 </body>

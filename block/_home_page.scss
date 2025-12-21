@@ -1,210 +1,204 @@
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e; 
-    color: #f0f0f0; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  background: linear-gradient(135deg, #0f1020, #1a1b2e);
+  color: #ffffff;
+}
+
+
 .dashboard-container {
-    display: flex;
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
 
 .sidebar {
-    width: 250px;
-    background-color: #131324; 
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  width: 260px;
+  background: linear-gradient(180deg, #0b0c1a, #14162b);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
 
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #8c7ae6; 
-        margin-bottom: 40px;
-    }
+  .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #8b7cff;
+    margin-bottom: 40px;
+  }
 
+  .nav-menu {
     ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      list-style: none;
 
-        li {
-            margin-bottom: 10px;
-
-            a {
-                display: flex;
-                align-items: center;
-                padding: 10px 15px;
-                text-decoration: none;
-                color: #b0b0d0;
-                border-radius: 8px;
-                transition: background-color 0.2s;
-
-                &:hover {
-                    background-color: #2b2b4a;
-                }
-
-                &.active {
-                    background-color: #8c7ae6;
-                    color: white;
-                }
-
-                .material-icons {
-                    margin-right: 10px;
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .threat-details, .settings-menu {
-        margin-top: 20px;
-
-        h4 {
-            color: #b0b0d0;
-            padding: 10px 15px;
-            margin: 0;
-        }
-    }
-
-    .upgrade-box {
-        background-color: #2b2b4a;
-        padding: 15px;
-        border-radius: 8px;
-        margin-top: auto; 
-        
-        p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
+      li {
+        margin-bottom: 15px;
 
         a {
-            color: #8c7ae6;
-            text-decoration: none;
-            font-weight: bold;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 16px;
+          border-radius: 10px;
+          color: #c7c9ff;
+          text-decoration: none;
+
+          &.active {
+            background-color: #8b7cff;
+            color: #ffffff;
+          }
+
+          &:hover {
+            background-color: #2a2d55;
+          }
         }
+      }
+    }
+  }
+
+  .threat-details {
+    margin-top: 30px;
+
+    h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #c7c9ff;
     }
 
-    .logout {
-        margin-top: 20px;
-        
-        a {
-            display: flex;
-            align-items: center;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: #f0f0f0;
-        }
+    a {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #c7c9ff;
+
+      &:hover {
+        background-color: #2a2d55;
+      }
     }
+  }
+
+  .settings-menu {
+    margin-top: 20px;
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #c7c9ff;
+
+      &:hover {
+        background-color: #2a2d55;
+      }
+    }
+  }
+
+  .upgrade-box {
+    margin-top: auto;
+    background-color: #2a2d55;
+    padding: 20px;
+    border-radius: 14px;
+    font-size: 14px;
+
+    p {
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #8b7cff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  .logout {
+    margin-top: 20px;
+
+    a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+  }
 }
 
 .main-content {
-    flex-grow: 1;
-    padding: 30px;
-}
+  flex: 1;
+  padding: 30px;
 
-.header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
 
     .greeting {
-        font-size: 18px;
-        font-weight: 500;
+      font-size: 22px;
+      font-weight: bold;
     }
 
-       .search-bar {
-        display: flex;
-        align-items: center;
-        background-color: #2b2b4a;
-        padding: 8px 15px;
-        border-radius: 20px;
-        width: 300px;
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #2a2d55;
+      padding: 10px 18px;
+      border-radius: 30px;
+      width: 320px;
 
-        .material-icons {
-            margin-right: 10px;
-            color: #b0b0d0;
-        }
+      span {
+        margin-right: 10px;
+        color: #c7c9ff;
+      }
 
-        input {
-            background: none;
-            border: none;
-            color: white;
-            outline: none;
-            width: 100%;
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        width: 100%;
+
+        &::placeholder {
+          color: #9da0ff;
         }
+      }
     }
-}
-
-
-
-.dashboard {
-  width: 90%;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.card {
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-
-  p {
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.9;
-  }
-
-  h2 {
-    margin-top: 10px;
-    font-size: 28px;
   }
 }
 
-.blue { background: #3b82f6; }
-.red { background: #ef4444; }
-.purple { background: #8b5cf6; }
-.dark-blue { background: #1e40af; }
-.green { background: #22c55e; }
-.orange { background: #f59e0b; }
-.light-green { background: #4ade80; }
-.coral { background: #fb7185; }
 
-
-.table-box {
-  background: #2a2d4f;
-  padding: 20px;
-  border-radius: 12px;
+h2 {
+  margin: 30px;
 }
 
 table {
-  width: 100%;
+  width: 90%;
+  margin: 0 30px 30px;
   border-collapse: collapse;
+  background-color: #1c1f3a;
+  border-radius: 12px;
+  overflow: hidden;
+
+  th {
+    background-color: #8b7cff;
+    padding: 12px;
+  }
+
+  td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #2a2d55;
+  }
+
+
 }
 
-thead {
-  background: #3b3f6b;
+button {
+  margin: 20px 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6b6b;
+  color: #ffffff;
+
 }
-
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #444;
-}
-
-
-
-
