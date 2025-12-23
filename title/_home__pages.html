@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,6 +75,29 @@
 </table>
 
 
+
+<button class="add-btn add-top-right" onclick="openAddModal()">
+  + Add Product
+</button>
+
+
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Add Product</h3>
+
+    <input id="titleInput" placeholder="Title">
+    <input id="categoryInput" placeholder="Category">
+    <input id="priceInput" type="number" placeholder="Price">
+    <textarea id="descInput" placeholder="Description"></textarea>
+    <input id="imageInput" placeholder="Image URL">
+
+    <div class="modal-btns">
+      <button onclick="saveProduct()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div> 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
