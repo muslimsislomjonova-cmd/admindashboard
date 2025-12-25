@@ -101,3 +101,21 @@ function logout() {
   localStorage.removeItem("token");
   window.location.href = "../login.html";
 }
+
+
+
+
+
+
+function editProduct(index) {
+  editIndex = index;
+
+  titleInput.value = products[index].title;
+  categoryInput.value = products[index].category;
+  priceInput.value = products[index].price;
+  descInput.value = products[index].description;
+  imageInput.value = products[index].image;
+
+  document.getElementById("modalTitle").innerText = "Edit Product";
+  document.getElementById("modal").style.display = "flex";
+}
