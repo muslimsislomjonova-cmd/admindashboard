@@ -13,7 +13,7 @@ fetch("https://fakestoreapi.com/products")
   .then(function (res) {
     return res.json();
   })
-  .then(function (data) {
+  .then(function (data) { 
     products = data;
     renderTable();
   })
@@ -119,3 +119,50 @@ function editProduct(index) {
   document.getElementById("modalTitle").innerText = "Edit Product";
   document.getElementById("modal").style.display = "flex";
 }
+
+function saveProduct() {
+  try {
+    const product = {
+      title: titleInput.value,
+      category: categoryInput.value,
+      price: priceInput.value,
+      description: descInput.value,
+      image: imageInput.value
+    };
+
+    if (editIndex === null) {
+      products.push(product);
+    } else {
+      products[editIndex] = product;
+    }
+
+    renderTable();
+    closeModal();
+  } catch (error) {
+    alert("Saqlashda xatolik bor!");
+    console.log(error);
+  }
+}
+
+
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  try {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const loginData = {
+      username: "mor_2314",
+      password: "83r5^_"
+    };
+
+  } catch (error) {
+    message.innerText = "Server error!";
+    message.style.color = "red";
+    console.log(error);
+  }
+});
